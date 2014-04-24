@@ -15,7 +15,7 @@ class MainWindow ( QMainWindow ):
         self.ui = None
         
     def connect_slots(self):
-        self.ui.pushButton.clicked.connect(self.pushButton_slot)
+        self.ui.pushButton_2.clicked.connect(self.pushButton_slot)
         print self.ui.pushButton.clicked.connect
     
     def pushButton_slot(self):
