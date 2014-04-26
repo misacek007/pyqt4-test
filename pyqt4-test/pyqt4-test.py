@@ -14,11 +14,13 @@ if __name__ == '__main__':
 
     # create widget
     w = MainWindow()
-    w.setWindowTitle( 'My PyQt4 QtGui Project' )
+    w.setWindowTitle('My PyQt4 QtGui Project')
+    w.create_shortcuts()
+    w.connect_slots()
     w.show()
 
     # connection
-    QObject.connect( app, SIGNAL( 'lastWindowClosed()' ), app, SLOT( 'quit()' ) )
+    QObject.connect(app, SIGNAL( 'lastWindowClosed()' ), app, SLOT('quit()'))
 
     # execute application
     sys.exit( app.exec_() )
